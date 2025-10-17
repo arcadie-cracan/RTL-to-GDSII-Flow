@@ -107,7 +107,7 @@ genus
 Use the following command to invoke Genus along with the script file:
 
 ```````````````````````````````````
-genus –f synthesis.tcl
+genus –f syn.tcl
 ```````````````````````````````````
 
 # Equivalency-Checking-Stage
