@@ -41,7 +41,7 @@ The following is the directory structure of the counter design mini-project
 
 | directory     | description   |
 | ------------- | ------------- |
-|source           | Contains common RTL design files  |
+|src           | Contains common RTL design files  |
 |sim-rtl  | Run Xcelium simulation here  |
 |syn|Run Genus synthesis here|
 |lec|Run Conformal equivalence checking here|
