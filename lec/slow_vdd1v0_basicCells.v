@@ -1,6 +1,42 @@
 //
-// Conformal-LEC: Version 22.20-p100 (07-Nov-2022) (64 bit executable)
+// Conformal-LEC: Version 22.10-s200 (16-Jun-2022) (64 bit executable)
 //
+module DECAP9;
+  // module is bboxed.
+endmodule
+
+module DECAP8;
+  // module is bboxed.
+endmodule
+
+module DECAP7;
+  // module is bboxed.
+endmodule
+
+module DECAP6;
+  // module is bboxed.
+endmodule
+
+module DECAP5;
+  // module is bboxed.
+endmodule
+
+module DECAP4;
+  // module is bboxed.
+endmodule
+
+module DECAP3;
+  // module is bboxed.
+endmodule
+
+module DECAP2;
+  // module is bboxed.
+endmodule
+
+module DECAP10;
+  // module is bboxed.
+endmodule
+
 module XOR3XL(Y, A, B, C);
 input  A, B, C;
 output Y;
@@ -116,37 +152,41 @@ endmodule
 module TLATSRXL(Q, QN, D, SN, G, RN);
 input  D, SN, G, RN;
 output Q, QN;
-wire  Q, QN, D, SN, G, RN, n$1, n$2;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
+wire  Q, QN, D, SN, G, RN, n$1, n$2, n$3;
+  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$2), .CK(n$3), .D(D));
   not U$4(n$1, SN);
-  and U$5(n$2, G, RN);
+  not U$5(n$2, RN);
+  and U$6(n$3, G, RN);
 endmodule
 
 module TLATSRX4(Q, QN, D, SN, G, RN);
 input  D, SN, G, RN;
 output Q, QN;
-wire  Q, QN, D, SN, G, RN, n$1, n$2;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
+wire  Q, QN, D, SN, G, RN, n$1, n$2, n$3;
+  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$2), .CK(n$3), .D(D));
   not U$4(n$1, SN);
-  and U$5(n$2, G, RN);
+  not U$5(n$2, RN);
+  and U$6(n$3, G, RN);
 endmodule
 
 module TLATSRX2(Q, QN, D, SN, G, RN);
 input  D, SN, G, RN;
 output Q, QN;
-wire  Q, QN, D, SN, G, RN, n$1, n$2;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
+wire  Q, QN, D, SN, G, RN, n$1, n$2, n$3;
+  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$2), .CK(n$3), .D(D));
   not U$4(n$1, SN);
-  and U$5(n$2, G, RN);
+  not U$5(n$2, RN);
+  and U$6(n$3, G, RN);
 endmodule
 
 module TLATSRX1(Q, QN, D, SN, G, RN);
 input  D, SN, G, RN;
 output Q, QN;
-wire  Q, QN, D, SN, G, RN, n$1, n$2;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
+wire  Q, QN, D, SN, G, RN, n$1, n$2, n$3;
+  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$2), .CK(n$3), .D(D));
   not U$4(n$1, SN);
-  and U$5(n$2, G, RN);
+  not U$5(n$2, RN);
+  and U$6(n$3, G, RN);
 endmodule
 
 module TLATNXL(Q, QN, D, GN);
@@ -272,41 +312,45 @@ endmodule
 module TLATNSRXL(Q, QN, D, SN, GN, RN);
 input  D, SN, GN, RN;
 output Q, QN;
-wire  Q, QN, D, SN, GN, RN, n$1, n$2, n$3;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
+wire  Q, QN, D, SN, GN, RN, n$1, n$2, n$3, n$4;
+  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$2), .CK(n$3), .D(D));
   not U$4(n$1, SN);
-  and U$5(n$2, n$3, RN);
-  not U$6(n$3, GN);
+  not U$5(n$2, RN);
+  and U$6(n$3, n$4, RN);
+  not U$7(n$4, GN);
 endmodule
 
 module TLATNSRX4(Q, QN, D, SN, GN, RN);
 input  D, SN, GN, RN;
 output Q, QN;
-wire  Q, QN, D, SN, GN, RN, n$1, n$2, n$3;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
+wire  Q, QN, D, SN, GN, RN, n$1, n$2, n$3, n$4;
+  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$2), .CK(n$3), .D(D));
   not U$4(n$1, SN);
-  and U$5(n$2, n$3, RN);
-  not U$6(n$3, GN);
+  not U$5(n$2, RN);
+  and U$6(n$3, n$4, RN);
+  not U$7(n$4, GN);
 endmodule
 
 module TLATNSRX2(Q, QN, D, SN, GN, RN);
 input  D, SN, GN, RN;
 output Q, QN;
-wire  Q, QN, D, SN, GN, RN, n$1, n$2, n$3;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
+wire  Q, QN, D, SN, GN, RN, n$1, n$2, n$3, n$4;
+  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$2), .CK(n$3), .D(D));
   not U$4(n$1, SN);
-  and U$5(n$2, n$3, RN);
-  not U$6(n$3, GN);
+  not U$5(n$2, RN);
+  and U$6(n$3, n$4, RN);
+  not U$7(n$4, GN);
 endmodule
 
 module TLATNSRX1(Q, QN, D, SN, GN, RN);
 input  D, SN, GN, RN;
 output Q, QN;
-wire  Q, QN, D, SN, GN, RN, n$1, n$2, n$3;
-  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(1'b0), .CK(n$2), .D(D));
+wire  Q, QN, D, SN, GN, RN, n$1, n$2, n$3, n$4;
+  _HDLAT_verplex U$1(.Q(Q), .QN(QN), .S(n$1), .R(n$2), .CK(n$3), .D(D));
   not U$4(n$1, SN);
-  and U$5(n$2, n$3, RN);
-  not U$6(n$3, GN);
+  not U$5(n$2, RN);
+  and U$6(n$3, n$4, RN);
+  not U$7(n$4, GN);
 endmodule
 
 module TLATNCAX8(ECK, E, CK);

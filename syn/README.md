@@ -17,7 +17,7 @@ read_libs slow_vdd1v0_basicCells.lib
 
 read_hdl counter.v
 elaborate
-read_sdc ../Constraints/constraints_top.sdc
+read_sdc ../constraints/constraints_top.sdc
 
 set_db syn_generic_effort medium
 set_db syn_map_effort medium
@@ -36,9 +36,9 @@ report_qor    > reports/report_qor.rpt
 
 
 #Outputs
-write_hdl > outputs/counter_netlist.v
-write_sdc > outputs/counter_sdc.sdc
-write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > outputs/delays.sdf
+write_hdl > netlists/counter_netlist.v
+write_sdc > netlists/counter_sdc.sdc
+write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > netlists/delays.sdf
 
 ````````````````````````````````````````````````````````````````````````````````````````````````````````
 
@@ -145,7 +145,7 @@ run commands one by one interactively in the Genus Stylus Common UI shell to ana
 
 1. Change to the synthesis directory by entering the following command:
 ````````````````````````````````````````````````````````````````````````````
-cd Synthesis
+cd syn
 ````````````````````````````````````````````````````````````````````````````
 
 2. Start the software in Stylus Common UI mode by entering:
@@ -212,16 +212,16 @@ next stages of the flow.
 
 1. To write out a synthesized netlist, enter:
 ````````````````````````````````````
-write_hdl > outputs/counter_netlist.v
+write_hdl > netlists/counter_netlist.v
 ````````````````````````````````````
 2. To generate a final SDC file run, enter:
 ````````````````````````````````````
-write_sdc > outputs/counter_sdc.sdc
+write_sdc > netlists/counter_sdc.sdc
 ````````````````````````````````````
 3. To write out an SDF file:
 ````````````````````````````````````
 write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge \
-                        -setuphold split > outputs/delays.sdf
+                        -setuphold split > netlists/delays.sdf
 ```````````````````````````````````````````````````````                    
 - `-timescale`: Mentions the time unit.
 - `-nonegchecks`: Ignores the negative timing checks.
@@ -232,6 +232,4 @@ write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge \
 Note: To know more about synthesis, please refer to the Dr-Adams' Synthesis Lecture and PDF of the user guide,
 command reference, attribute reference, etc., available inside the installation directory of the tool.
 
-# <div align="center"> وَقُلْ رَبِّ زِدْنِي عِلْمًا </div>
- 
  <div align="center"> End of Lab.</div> 
